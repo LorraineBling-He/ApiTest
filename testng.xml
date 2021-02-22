@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="设计工具">
+   <test verbose="1" preserve-order="true" name="获取文档的所有表格数据">
+        <classes><class name="com.automation.cases.DocTool">
+            <methods><include name="tablesDataExchangeData"/>
+            </methods>
+        </class></classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="获取当前版本数据源">
+        <classes><class name="com.automation.cases.DocTool">
+            <methods><include name="getdatasourceDataSourceData"/>
+            </methods>
+        </class></classes>
+    </test>
+
+    <test verbose="3" preserve-order="true" name="新增数据源">
+        <classes><class name="com.automation.cases.DocTool">
+            <methods><include name="postdatasourceDataSource"/>
+            </methods>
+        </class></classes>
+    </test>
+
+    <test verbose="4" preserve-order="true" name="获取字典项名称">
+        <classes><class name="com.automation.cases.DocTool">
+            <methods><include name="dictionaryDicCtrl"/>
+            </methods>
+        </class></classes>
+    </test>
+
+    <test verbose="5" preserve-order="true" name="获取当前登录人员对某个专业和子项的权限（1：有编辑权限，2：只读权限，3：无权限）">
+        <classes><class name="com.automation.cases.DocTool">
+            <methods><include name="AccessNumberDocCtrl"/>
+            </methods>
+        </class></classes>
+    </test>
+
+
+    <test verbose="6" preserve-order="true" name="新建单个子项目">
+        <classes><class name="com.automation.cases.DocTool">
+            <methods><include name="postsubSubProject"/>
+            </methods>
+        </class></classes>
+    </test>
+</suite>
