@@ -11,6 +11,7 @@ import com.automation.pojo.WriteData;
 import java.io.Closeable;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -61,10 +62,11 @@ public class ExcelUtils {
      * @param address
      */
     public static <E> List<E> read(String address,int StartSheetIndex,Class<E> clazz) {
-        FileInputStream fis=null;
+        InputStream fis=null;
         try {
             //1、加载Excel文件
-            fis = new FileInputStream(address);
+//            fis = new FileInputStream(address);
+            fis = new ExcelUtils().getClass().getClassLoader().getResourceAsStream(address);
             //2、导入配置，创建空对象相当于用默认配置
             ImportParams params = new ImportParams();
             //针对情况可以去修改默认配置 如：

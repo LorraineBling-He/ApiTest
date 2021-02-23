@@ -21,6 +21,7 @@ import com.automation.pojo.Case;
 import com.automation.pojo.JsonPathValidate;
 
 import java.io.FileInputStream;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.util.List;
 import java.util.Properties;
@@ -41,10 +42,10 @@ public class BaseCase  extends AbstractTestNGSpringContextTests{
     @BeforeSuite
     @Step("初始化")
     public static void init(){
-        FileInputStream fis =null;
+        InputStream fis =null;
         try {
             Properties properties = new Properties();
-            fis = new FileInputStream(CONFIG_PATH);
+            fis = new ExcelUtils().getClass().getClassLoader().getResourceAsStream(CONFIG_PATH);
             properties.load(fis);
             for (Object key: properties.keySet()) {
                 if(properties.get(key).equals("__random")){

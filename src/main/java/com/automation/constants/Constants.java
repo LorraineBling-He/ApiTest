@@ -5,7 +5,9 @@ public class Constants {
     //final修饰变量，变量成为常量
     //final修饰类，类不能被继承（不常用）
     //final修饰方法，不能被重写（不常用）
-    public static final String EXCEL_PATH="C:/Users/jjhe/Desktop/test.xls";
+//    public static final String EXCEL_PATH="D:\\work\\CBIM\\接口自动化\\APIgit\\APItest-springboot\\src\\main\\resources\\test.xls";
+    public static final String EXCEL_PATH="test.xls";
+//    public static final String EXCEL_PATH="classpath:./test.xls";
     public static final String IP="https://dev-doctool.cbim.org.cn";
     //实际响应数据回写列
     public static final int CELLNUM=6;
@@ -19,7 +21,7 @@ public class Constants {
     public static final String JDBC_USER="root";
     public static final String JDBC_PASSWORD="123456";
     //config文件地址
-    public static final String CONFIG_PATH="D:\\work\\CBIM\\接口自动化\\APIgit\\APItest-springboot\\src\\main\\resources\\paramConfig.properties";
+    public static final String CONFIG_PATH="paramConfig.properties";
 
 
 }
