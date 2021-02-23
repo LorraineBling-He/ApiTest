@@ -19,7 +19,7 @@ public class Constants {
     public static final String JDBC_USER="root";
     public static final String JDBC_PASSWORD="123456";
     //config文件地址
-    public static final String CONFIG_PATH="D:\\work\\CBIM\\接口自动化\\APIgit\\APItest - new\\src\\main\\resources\\paramConfig.properties";
+    public static final String CONFIG_PATH="D:\\work\\CBIM\\接口自动化\\APIgit\\APItest-springboot\\src\\main\\resources\\paramConfig.properties";
 
 
 }
