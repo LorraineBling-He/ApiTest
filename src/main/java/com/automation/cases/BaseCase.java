@@ -45,7 +45,8 @@ public class BaseCase  extends AbstractTestNGSpringContextTests{
         InputStream fis =null;
         try {
             Properties properties = new Properties();
-            fis = new ExcelUtils().getClass().getClassLoader().getResourceAsStream(CONFIG_PATH);
+            //fis = new ExcelUtils().getClass().getClassLoader().getResourceAsStream(CONFIG_PATH);
+            fis = ExcelUtils.class.getClassLoader().getResourceAsStream(CONFIG_PATH);
             properties.load(fis);
             for (Object key: properties.keySet()) {
                 if(properties.get(key).equals("__random")){

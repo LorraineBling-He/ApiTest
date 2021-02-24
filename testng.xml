@@ -9,7 +9,7 @@
         </class></classes>
     </test>
 
-    <test verbose="2" preserve-order="true" name="获取当前版本数据源">
+   <test verbose="2" preserve-order="true" name="获取当前版本数据源">
         <classes><class name="com.automation.cases.DocTool">
             <methods><include name="getdatasourceDataSourceData"/>
             </methods>

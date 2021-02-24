@@ -66,7 +66,8 @@ public class ExcelUtils {
         try {
             //1、加载Excel文件
 //            fis = new FileInputStream(address);
-            fis = new ExcelUtils().getClass().getClassLoader().getResourceAsStream(address);
+            //fis = new ExcelUtils().getClass().getClassLoader().getResourceAsStream(address);
+            fis = ExcelUtils.class.getClassLoader().getResourceAsStream(address);
             //2、导入配置，创建空对象相当于用默认配置
             ImportParams params = new ImportParams();
             //针对情况可以去修改默认配置 如：
