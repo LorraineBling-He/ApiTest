@@ -100,10 +100,10 @@ public class ExcelUtils {
     }
 
     public static void batchWrite(List<WriteData> arrayList) {
-        FileInputStream fis=null;
+        InputStream fis=null;
         FileOutputStream fos=null;
         try{
-            fis=new FileInputStream(EXCEL_PATH);
+            fis = ExcelUtils.class.getClassLoader().getResourceAsStream(EXCEL_PATH);
             Workbook workbook=WorkbookFactory.create(fis);
             Sheet sheet=workbook.getSheet("接口用例");
             //遍历

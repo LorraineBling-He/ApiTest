@@ -35,7 +35,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 
 @SpringBootTest(classes = {Starter.class})
-public class BaseCase  extends AbstractTestNGSpringContextTests{
+public class BaseCase extends AbstractTestNGSpringContextTests{
 
     public static Logger log=Logger.getLogger(BaseCase.class);
 
